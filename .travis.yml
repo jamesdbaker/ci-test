@@ -10,3 +10,4 @@ script:
 - mvn clean package
 after_success:
 - mvn jacoco:report coveralls:report
+- mvn com.gavinmogan:codacy-maven-plugin:coverage -DcoverageReportFile=target/site/jacoco/jacoco.xml -DprojectToken=$CODACY_PROJECT_TOKEN -DapiToken=$CODACY_API_TOKEN
