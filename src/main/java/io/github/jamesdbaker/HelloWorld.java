@@ -5,7 +5,7 @@ package io.github.jamesdbaker;
  */
 public class HelloWorld {
   public static void main(String[] args){
-    System.out.println("Hello "+getName(args)+"!");
+    System.out.println(getGreeting()+" "+getName(args)+"!");
   }
 
   protected static String getName(String[] args){
@@ -13,6 +13,18 @@ public class HelloWorld {
       return "world";
     }else{
       return args[0];
+    }
+  }
+
+  protected static String getGreeting(){
+    long option = System.currentTimeMillis() % 3;
+
+    if(option == 0){
+      return "Hello";
+    }else if(option == 1){
+      return "Hey";
+    }else{
+      return "G'day";
     }
   }
 }
