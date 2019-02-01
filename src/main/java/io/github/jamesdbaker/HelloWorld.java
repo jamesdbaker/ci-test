@@ -1,5 +1,9 @@
 package io.github.jamesdbaker;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * A friendly class that will say hello to everyone!
  */
@@ -17,14 +21,9 @@ public class HelloWorld {
   }
 
   protected static String getGreeting(){
-    long option = System.currentTimeMillis() % 3;
+    List<String> greetings = Arrays.asList("Hello", "Howdy", "Hey", "G'day");
+    Collections.shuffle(greetings);
 
-    if(option == 0){
-      return "Hello";
-    }else if(option == 1){
-      return "Hey";
-    }else{
-      return "G'day";
-    }
+    return greetings.get(0);
   }
 }
