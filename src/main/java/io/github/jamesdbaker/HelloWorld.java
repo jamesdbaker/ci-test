@@ -1,5 +1,8 @@
 package io.github.jamesdbaker;
 
+/**
+ * A friendly class that will say hello to everyone!
+ */
 public class HelloWorld {
   public static void main(String[] args){
     System.out.println("Hello "+getName(args)+"!");
